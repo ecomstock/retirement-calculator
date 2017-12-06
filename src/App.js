@@ -6,7 +6,10 @@ import Tabs, { Tab } from 'material-ui/Tabs';
 import './App.css';
 
 //App components
-import YourGoals from "./YourGoals";
+import User from "./User";
+import Holdings from "./Holdings";
+import Contributions from "./Contributions";
+import Assumptions from "./Assumptions";
 
 class App extends Component {
   render() {
@@ -15,14 +18,31 @@ class App extends Component {
         <CardHeader className="card-header" title="Retirement Calculator" />
         <AppBar position="static">
           <Tabs>
-            <Tab label="You and your goals" />
-            <Tab label="Current holdings" />
-            <Tab label="Future contributions" />
-            <Tab label="Editable assumptions" />
+            <Tab 
+              label="You and your goals"
+              href="/"
+            />
+            <Tab 
+              label="Current holdings"
+              href="/current-holdings"
+            />
+            <Tab 
+              label="Future contributions"
+              href="/future-contributions"
+            />
+            <Tab 
+              label="Editable assumptions"
+              href="/editable-assumptions"
+            />
           </Tabs>
         </AppBar>
         <BrowserRouter>
-          <Route path="/" component={YourGoals}/>
+          <div>
+            <Route exact path="/" component={User}/>
+            <Route path="/current-holdings" component={Holdings}/>
+            <Route path="/future-contributions" component={Contributions}/>
+            <Route path="/editable-assumptions" component={Assumptions}/>
+          </div>
         </BrowserRouter>
       </Card>
     );

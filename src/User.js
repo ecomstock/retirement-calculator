@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const YourGoals = props =>
+const User = props =>
     <p>Hello, world.</p>
 
-// YourGoals.propTypes = {
+// User.propTypes = {
 
 // }
 
-export default YourGoals
+export default User
