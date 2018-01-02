@@ -4,61 +4,71 @@ import TextField from 'material-ui/TextField';
 
 const User = props =>
 	<div>
-  	<p>Tell us about yourself</p>
-		<p>Are you legally married?</p>
-		<br />
+  	<h3 className="left-margin">Tell us about yourself</h3>
 		<TextField
-			label="How old are you?"
+			className="left-margin"
+			label="Age"
 			margin="normal"
 		/>
 		<i class="material-icons">help_outline</i>
 		<br />
 		<TextField
-			label="How old is your spouse?"
-			margin="normal"
-		/>
-		<br />
-		<p>Gender dropdowns go here.</p>
-		<br />
-		<TextField
-			label="Average monthly income"
+			label="Average total monthly income after taxes. Do not include spouse's income."
 			margin="normal"
 		/>
 		<i class="material-icons">help_outline</i>
 		<br />
+		<p>Will you be eligible for Social Security benefits?</p>
+		<p>Do you have a defined benefit pension?</p>
+		<h3>Your accounts</h3>
+		<p>401(k)/403(b)</p>
 		<TextField
-			label="Spouse's average monthly income"
+			label="Account balance"
+			margin="normal"
+		/>
+		<i class="material-icons">help_outline</i>
+		<TextField
+			label="Annual contribution"
 			margin="normal"
 		/>
 		<i class="material-icons">help_outline</i>
 		<br />
+		<p>IRA</p>
 		<TextField
-			label="Other monthly income"
+			label="Account balance"
+			margin="normal"
+		/>
+		<i class="material-icons">help_outline</i>
+		<TextField
+			label="Annual contribution"
 			margin="normal"
 		/>
 		<i class="material-icons">help_outline</i>
 		<br />
+		<p>Roth IRA</p>
 		<TextField
-			label="Significant annual income"
+			label="Account balance"
+			margin="normal"
+		/>
+		<i class="material-icons">help_outline</i>
+		<TextField
+			label="Annual contribution"
 			margin="normal"
 		/>
 		<i class="material-icons">help_outline</i>
 		<br />
-		<p>Education dropdowns go here.</p>
-		<br />
-		<p>Homeowner dropdown goes here.</p>
-		<br />
+		<p>Private accounts (stocks, bonds, mutual funds, ETFs, etc.)</p>
 		<TextField
-			label="When will your primary home be paid off?"
+			label="Account balance"
+			margin="normal"
+		/>
+		<i class="material-icons">help_outline</i>
+		<TextField
+			label="Annual contribution"
 			margin="normal"
 		/>
 		<i class="material-icons">help_outline</i>
 		<br />
-		<TextField
-			label="What is your monthly mortgage payment?"
-			margin="normal"
-		/>
-		<i class="material-icons">help_outline</i>
 	</div>
 
 // User.propTypes = {

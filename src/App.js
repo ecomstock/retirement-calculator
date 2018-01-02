@@ -19,29 +19,23 @@ class App extends Component {
         <AppBar position="static">
           <Tabs>
             <Tab 
-              label="You and your goals"
+              label="You and your accounts"
               href="/"
             />
             <Tab 
-              label="Current holdings"
-              href="/current-holdings"
+              label="Assumptions"
+              href="/assumptions"
             />
             <Tab 
-              label="Future contributions"
-              href="/future-contributions"
-            />
-            <Tab 
-              label="Editable assumptions"
-              href="/editable-assumptions"
+              label="View Report"
+              href="/report"
             />
           </Tabs>
         </AppBar>
         <BrowserRouter>
           <div>
             <Route exact path="/" component={User}/>
-            <Route path="/current-holdings" component={Holdings}/>
-            <Route path="/future-contributions" component={Contributions}/>
-            <Route path="/editable-assumptions" component={Assumptions}/>
+            <Route path="/assumptions" component={Assumptions}/>
           </div>
         </BrowserRouter>
       </Card>

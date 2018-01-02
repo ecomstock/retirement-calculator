@@ -1,7 +1,49 @@
-
-
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
+  background-color: white;
 }
+
+.card {
+  width: 600px;
+  margin: 10px auto;
+}
+
+.left-margin {
+  margin-left: 10px;
+}
+
+/* #purchase-price, #down-payment, #loan-term {
+  margin-top: 10px;
+}
+
+#interest {
+  max-width: 165px;
+}
+
+#term {
+  max-width: 142px;
+}
+
+#radio-percent {
+  margin-left: 5px;
+}
+
+.dollar-figures {
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+.reset-button {
+  margin: 20px 0px 25px 10px;
+}
+
+.card-header {
+  background-color: #3f51b5;
+}
+
+.card-header-title {
+  color: white!important;
+} */
+
+
+
