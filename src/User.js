@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactTooltip from 'react-tooltip'
 import Input, { InputLabel } from 'material-ui/Input';
-import { FormControl, FormControlLabel, FormHelperText } from 'material-ui/Form';
+import { FormGroup, FormControl, FormControlLabel, FormHelperText } from 'material-ui/Form';
+import Checkbox from 'material-ui/Checkbox';
+import Tooltip from "./Tooltip"
 
 const User = props =>
 	<div>
@@ -10,23 +13,39 @@ const User = props =>
 			<InputLabel className="left-margin">Age</InputLabel>
 			<Input
 				className="left-margin"
-				margin="normal"
+				margin="normal"	
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip content="test" />
 		<br />
-		<FormControl>
-			<InputLabel className="left-margin">Your total monthly income after taxes</InputLabel>
+		<FormControl className="monthly-income">
+			<InputLabel className="left-margin monthly-income">Monthly income after taxes</InputLabel>
 			<Input
 				className="left-margin"
 				margin="normal"	
 			/>
 			<FormHelperText id="fh-left-margin">Do not include spouse's income</FormHelperText>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<br />
-		<p className="left-margin">Will you be eligible for Social Security benefits?</p>
-		<p className="left-margin">Do you have a defined benefit pension?</p>
+		<p className="left-margin">Are you eligible to receive Social Security or a pension? 
+			<Tooltip />
+			<FormGroup row>
+				<FormControlLabel
+					control={
+						<Checkbox value="checkedA" />
+					}
+				label="Social Security"
+				/>
+				<FormControlLabel
+					control={
+						<Checkbox value="checkedA" />
+					}
+				label="Pension"
+				/>
+			</FormGroup>
+		</p>
+
 		<h3 className="left-margin">Your accounts</h3>
 		<p className="left-margin">401(k)/403(b)</p>
 		<FormControl>
@@ -36,7 +55,7 @@ const User = props =>
 				margin="normal"
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<FormControl>
 			<InputLabel className="left-margin">Annual contribution</InputLabel>
 			<Input
@@ -44,7 +63,7 @@ const User = props =>
 				margin="normal"
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<br />
 		<p className="left-margin">IRA</p>
 		<FormControl>
@@ -54,7 +73,7 @@ const User = props =>
 				margin="normal"
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<FormControl>
 			<InputLabel className="left-margin">Annual contribution</InputLabel>
 			<Input
@@ -62,7 +81,7 @@ const User = props =>
 				margin="normal"
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<br />
 		<p className="left-margin">Roth IRA</p>
 		<FormControl>
@@ -72,7 +91,7 @@ const User = props =>
 				margin="normal"
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<FormControl>
 			<InputLabel className="left-margin">Annual contribution</InputLabel>
 			<Input
@@ -80,7 +99,7 @@ const User = props =>
 				margin="normal"
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<br />
 		<p className="left-margin">Private accounts (stocks, bonds, mutual funds, ETFs, etc.)</p>
 		<FormControl>
@@ -90,7 +109,7 @@ const User = props =>
 				margin="normal"
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<FormControl>
 			<InputLabel className="left-margin">Annual contribution</InputLabel>
 			<Input
@@ -98,7 +117,7 @@ const User = props =>
 				margin="normal"
 			/>
 		</FormControl>
-		<i class="material-icons">help_outline</i>
+		<Tooltip />
 		<br />
 	</div>
 

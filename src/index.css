@@ -16,6 +16,10 @@ body {
   margin-left: 10px;
 }
 
+.monthly-income {
+  width: 225px;
+}
+
 
 
 /* #purchase-price, #down-payment, #loan-term {
