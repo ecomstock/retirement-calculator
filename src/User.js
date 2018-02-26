@@ -16,7 +16,9 @@ const User = props =>
 				margin="normal"	
 			/>
 		</FormControl>
-		<Tooltip content="test" />
+		<Tooltip tipId="age" 
+			content="Please enter your current age." 
+		/>
 		<br />
 		<FormControl className="monthly-income">
 			<InputLabel className="left-margin monthly-income">Monthly income after taxes</InputLabel>
@@ -26,10 +28,14 @@ const User = props =>
 			/>
 			<FormHelperText id="fh-left-margin">Do not include spouse's income</FormHelperText>
 		</FormControl>
-		<Tooltip />
+		<Tooltip tipId="monthly-income" 
+			content="Please enter your current montly income. Do not include your spouse's income. Retirement should be calculated individually to account for differences in age, retirement age, life expectancy, and income." 
+		/>
 		<br />
 		<p className="left-margin">Are you eligible to receive Social Security or a pension? 
-			<Tooltip />
+			<Tooltip tipId="fixed-benefit"
+				content="These are fixed benefit accounts, meaning they will generate a static amount of monthly inflation-adjusted income. This model assumes a Social Security age of 62 and a pension age of 65. According to... You may adjust these ages under the Assumptions tab." 
+			/>
 			<FormGroup row>
 				<FormControlLabel
 					control={

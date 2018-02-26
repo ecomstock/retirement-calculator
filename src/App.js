@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Card, { CardHeader } from 'material-ui/Card';
 import AppBar from 'material-ui/AppBar';
 import Tabs, { Tab } from 'material-ui/Tabs';
+import ReactTooltip from 'react-tooltip'
 import './App.css';
 
 //App components
